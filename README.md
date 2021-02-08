@@ -10,6 +10,7 @@ Important keys:
 - y - yellow
 - s - square brush
 - o - oval brush
+- 0-9 - change brush thickness
 - anything else - black
 
 ## Execute
