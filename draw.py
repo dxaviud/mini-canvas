@@ -1,6 +1,10 @@
 from tkinter import Tk, Canvas
+from PIL import ImageGrab
 
 class Drawing():
+
+    def __init__(self):
+        self.__save_count = 1
 
     def display(self):
 
@@ -21,6 +25,14 @@ class Drawing():
         
         canvas.bind("<B1-Motion>", draw)
         canvas.bind("<ButtonPress>", draw)
+
+        def save_as_png(widget):
+            x = root.winfo_rootx() + widget.winfo_x()
+            y = root.winfo_rooty() + widget.winfo_y()
+            x1 = x + widget.winfo_width()
+            y1 = y + widget.winfo_height()
+            ImageGrab.grab().crop((x,y,x1,y1)).save("my-canvas-" + str(self.__save_count) + ".png")
+            self.__save_count += 1
 
         def key_press(event):
             nonlocal draw_color
@@ -47,6 +59,8 @@ class Drawing():
                     brush_shape = "square"
                 elif key == "O":
                     brush_shape = "oval"
+                elif key == "=":
+                    save_as_png(canvas)
                 else:
                     draw_color = "black"
 
