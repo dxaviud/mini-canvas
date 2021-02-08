@@ -8,7 +8,7 @@ Important keys:
 - g - greed
 - b - blue
 - y - yellow
- -s - square brush
+- s - square brush
 - o - oval brush
 - anything else - black
 
