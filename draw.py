@@ -66,6 +66,7 @@ class Drawing():
 
         canvas.bind("<KeyPress>", key_press)
         canvas.focus_set()
+        root.resizable(False, False)
 
         root.mainloop()
 
