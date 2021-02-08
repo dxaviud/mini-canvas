@@ -16,4 +16,4 @@ Important keys:
 ![minicanvas](https://dxaviud.github.io/images/minicanvas.gif)
 
 ## Execute
-Make sure Python 3 is installed. Clone this repository. In a terminal, navigate to the directory containing draw.py and run `python draw.py` to execute.
+Make sure Python 3 is installed. Also install [Pillow](https://pillow.readthedocs.io/en/stable/installation.html). Clone this repository. In a terminal, navigate to the directory containing draw.py and run `python draw.py` to execute.
