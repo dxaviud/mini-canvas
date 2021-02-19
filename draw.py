@@ -1,6 +1,7 @@
 from tkinter import Tk, Canvas
 from PIL import ImageGrab
 
+
 class Drawing():
 
     def __init__(self):
@@ -19,10 +20,12 @@ class Drawing():
 
         def draw(event):
             if brush_shape == "square":
-                canvas.create_rectangle(event.x-brush_thickness, event.y-brush_thickness, event.x+brush_thickness, event.y+brush_thickness, fill=draw_color, outline=draw_color)
+                canvas.create_rectangle(event.x-brush_thickness, event.y-brush_thickness, event.x +
+                                        brush_thickness, event.y+brush_thickness, fill=draw_color, outline=draw_color)
             elif brush_shape == "oval":
-                canvas.create_oval(event.x-brush_thickness, event.y-brush_thickness, event.x+brush_thickness, event.y+brush_thickness, fill=draw_color, outline=draw_color)
-        
+                canvas.create_oval(event.x-brush_thickness, event.y-brush_thickness, event.x +
+                                   brush_thickness, event.y+brush_thickness, fill=draw_color, outline=draw_color)
+
         canvas.bind("<B1-Motion>", draw)
         canvas.bind("<ButtonPress>", draw)
 
@@ -31,7 +34,8 @@ class Drawing():
             y = root.winfo_rooty() + widget.winfo_y()
             x1 = x + widget.winfo_width()
             y1 = y + widget.winfo_height()
-            ImageGrab.grab().crop((x,y,x1,y1)).save("my-canvas-" + str(self.__save_count) + ".png")
+            ImageGrab.grab().crop((x, y, x1, y1)).save(
+                "my-canvas-" + str(self.__save_count) + ".png")
             self.__save_count += 1
 
         def key_press(event):
@@ -69,6 +73,7 @@ class Drawing():
         root.resizable(False, False)
 
         root.mainloop()
+
 
 if __name__ == "__main__":
     app = Drawing()
