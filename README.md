@@ -11,6 +11,7 @@ Important keys:
 - s: square brush
 - o: oval brush
 - 0-9: change brush thickness
+- =: save canvas as png
 - anything else: black  
 
 ![minicanvas](https://dxaviud.github.io/images/minicanvas.gif)
