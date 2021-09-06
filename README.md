@@ -1,7 +1,7 @@
 # mini-canvas
 
 ## About
-A simple paint program using Tkinter.
+
 Important keys:
 - c: clear canvas
 - r: red
